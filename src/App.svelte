@@ -32,7 +32,7 @@
 
 
 <SvelteSeo
-  title="Life in Weeks | RYounus"
+  title="Life in Weeks | Yong's Journal"
   description="Life's progress made visible..."
 />
 <Tailwind />
@@ -42,11 +42,8 @@
 			<h1>Life in Weeks.</h1>
 
 			{#if !collapsed}
-			<p class="text-gray-900 font-bold">Life's progress made visible...</p> 
-			<p>Visualising your life in weeks can <i class="font-light pr-1.5">feel weird</i> and <i class="font-light pr-1.5">morbid</i> to some but it can prove to be a good indicator of where you currently are in life.</p>
-			<p>It should be seen in a positive light and help you pursue a better future to maximise the time you have left. <span>✈️🏖️🚵‍♂️🏄‍♂️</span></p>
-			<p class="text-gray-900">Start by entering your <i class="font-light">date of birth</i> and <i class="font-light">estimated life expectancy</i>✨ </p> 
-
+			<p class="text-gray-900 font-bold">My Life's progress made visible...</p> 
+			
 			<Form />
 			{/if}
 
