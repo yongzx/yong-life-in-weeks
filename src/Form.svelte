@@ -5,13 +5,15 @@
     let errors = {};
     
     // local bindings
+    let templateName = $formStore.templateName
     let dateOfBirth = $formStore.dateOfBirth
     let lifeExpectancy = $formStore.lifeExpectancy
 
 	function handleSubmit() {
-		formValidationSchema.validate({dateOfBirth, lifeExpectancy}, { abortEarly: false })
+		formValidationSchema.validate({templateName, dateOfBirth, lifeExpectancy}, { abortEarly: false })
       	.then(() => {
             errors = {}
+            formStore.setTemplateName(templateName)
             formStore.setDateOfBirth(dateOfBirth)
             formStore.setLifeExpectancy(lifeExpectancy)
 		  })
@@ -53,6 +55,14 @@
 <form on:submit|preventDefault={handleSubmit}>
     <div class="form-wrapper">
         <div class="input-wrapper">
+            <span class="input-span" aria-hidden="true">📑 </span>
+            <input class="input" type="string" bind:value={templateName} name="template-name" />
+        </div>
+        {#if errors.templateName}<span class="error-span">{errors.templatename}</span>{/if}
+    </div>
+
+    <div class="form-wrapper">
+        <div class="input-wrapper">
             <span class="input-span" aria-hidden="true">📅 </span>
             <input class="input" type="date" bind:value={dateOfBirth} name="date-of-birth" />
         </div>
@@ -68,5 +78,5 @@
         {#if errors.lifeExpectancy}<span class="error-span">{errors.lifeExpectancy}</span>{/if}	
     </div>
 
-    <button type="submit">Calculate</button>
+    <button type="submit">Compute</button>
 </form>

@@ -9,12 +9,8 @@
 
 <footer>
     <span>
-        © {new Date().getFullYear()}, Built by
-        <a
-          href="https://www.ryounus.dev"
-        >
-          RYounus
-        </a>
+        © {new Date().getFullYear()}, 
+        Built by <a href="https://www.yongzx.github.io">Yong</a> using <a href="https://github.com/rahman95/life-in-weeks">RYounus' Template</a>
         ✨
       </span>
 </footer>

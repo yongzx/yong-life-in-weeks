@@ -17,7 +17,8 @@
             rendered = false
             return
         }
-
+        
+        console.log(dateOfBirth);
         renderCanvas("resultsCanvas", getWeeksFromDoB(dateOfBirth), getAgeInWeeks(lifeExpectancy), getPixelRatio())
         rendered = true
     }

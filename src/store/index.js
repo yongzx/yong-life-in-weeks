@@ -2,7 +2,8 @@ import { writable } from "svelte/store";
 
 function createFormStore() {
   const defaultStore = {
-    lifeExpectancy: 75,
+    templateName: "Career",
+    lifeExpectancy: 80,
     dateOfBirth: "",
     collapsed: false,
   };
@@ -11,6 +12,12 @@ function createFormStore() {
 
   return {
     subscribe,
+    setTemplateName: (value) =>
+      update((n) => {
+        n.templateName = value;
+
+        return n;
+      }),
     setLifeExpectancy: (value) =>
       update((n) => {
         n.lifeExpectancy = value;

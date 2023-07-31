@@ -42,7 +42,7 @@
 			<h1>Life in Weeks.</h1>
 
 			{#if !collapsed}
-			<p class="text-gray-900 font-bold">My Life's progress made visible...</p> 
+			<p class="text-gray-900 font-bold">My Life in weeks...</p> 
 			
 			<Form />
 			{/if}

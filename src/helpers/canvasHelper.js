@@ -31,6 +31,7 @@ const renderCanvas = (
   lifeExpectancyInWeeks,
   pixelRatio
 ) => {
+  // BUG: if we set default, it will render canvas but the canvas hasn't be generated (so getElementById is null.)
   const parent = document.getElementById(targetCanvasId).parentElement;
   const rectSizing = rectSizingFromParent(
     parent.offsetWidth,
